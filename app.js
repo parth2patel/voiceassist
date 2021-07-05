@@ -92,8 +92,9 @@ function process(rawText) {
         response = jokes[Math.floor(Math.random()*jokes.length)];
     }
     else if(text.includes("play")){
-        window.open(`https://www.youtube.com/results?search_query=${rawText.replace("play", "")}`, "_blank");
-        response = "playing " + rawText.replace("Play", "");
+        window.open(`https://www.youtube.com/results?search_query=${rawText.replace("Play", "")}`, "_blank");
+        const txt = rawText.replace("Play", "");
+        response = "playing" + txt;
     }
     else if(text.includes("stop") || text.includes("exit")){
         response = "Bye!!";
@@ -101,7 +102,7 @@ function process(rawText) {
     }
 
     if (!response) {
-        window.open(`http://google.com/search?q=${rawText.replace("search", "")}`, "_blank");
+        window.open(`http://google.com/search?q=${rawText.replace("Search", "")}`, "_blank");
         return `I found some information for ${rawText}`;
     }
 
