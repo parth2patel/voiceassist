@@ -1,8 +1,6 @@
 // UI comp
 const startBtn = document.createElement("button");
 startBtn.innerHTML = "Start listening";
-document.getElementsByTagName("button").bgcolor="#FFFF00";
-//document.getElementsByTagName("button").bgcolor="#FFFF00";
 const result = document.createElement("div");
 const processing = document.createElement("p");
 document.write("<body><h1>Voice Assistant</h1><p>Give it a try with 'hello', 'how are you', 'what's your name', 'what time is it', 'stop', ... </p></body>");
@@ -61,6 +59,14 @@ function process(rawText) {
     text = text.toLowerCase();
     let response = null;
     
+    const jokes[
+        'What kind of music do bunnies like best? Answer: Hip Hop!',
+        'Why are cricket stadiums so cool? Answer: Because every seat has a fan in it!',
+        'Why did the banker switch careers? Answer: She lost interest',
+        'What do you call a rose that wants to go to the moon? Answer: Gulab Ja Moon',
+        'What is orange and sounds like a parrot? Answer: A carrot'
+    ];
+    
     if(text.includes("hello")){
         response = "hi, how are you doing?";
     }
@@ -70,8 +76,20 @@ function process(rawText) {
     else if(text.includes("howareyou")){
         response = "I'm good.";
     }
+    else if(text.includes("fine")){
+        response = "good.";
+    }
+    else if(text.includes("good")){
+        response = "great.";
+    }
+    else if(text.includes("weather")){
+        response = "The weather is humid";
+    }
     else if(text.includes("time")){
         response = new Date().toLocaleTimeString();
+    }
+    else if(text.includes("joke")){
+        response = jokes[Math.floor(Math.random()*jokes.length)];
     }
     else if(text.includes("stop") || text.includes("exit")){
         response = "Bye!!";
