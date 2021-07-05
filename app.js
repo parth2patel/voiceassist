@@ -3,7 +3,6 @@ const startBtn = document.createElement("button");
 startBtn.innerHTML = "Start listening";
 const result = document.createElement("div");
 const processing = document.createElement("p");
-document.write("<body><h1>Voice Assistant</h1><p>Give it a try with 'hello', 'how are you', 'what's your name', 'what time is it', 'stop', ... </p></body>");
 document.body.append(startBtn);
 document.body.append(result);
 document.body.append(processing);
@@ -54,10 +53,9 @@ if (typeof SpeechRecognition === "undefined") {
 
 // processor
 function process(rawText) {
-    //let text = rawText.replace(/\s/g, "");
-    let text = rawText
-    //text = text.toLowerCase();
-    return text; //debug
+    let text = rawText.replace(/\s/g, "");
+    //let text = rawText
+    text = text.toLowerCase();
     let response = null;
     
     const jokes = [
