@@ -54,9 +54,9 @@ if (typeof SpeechRecognition === "undefined") {
 
 // processor
 function process(rawText) {
-    let text = rawText.replace(/\s/g, "");
-    //let text = rawText
-    text = text.toLowerCase();
+    //let text = rawText.replace(/\s/g, "");
+    let text = rawText
+    //text = text.toLowerCase();
     return text; //debug
     let response = null;
     
