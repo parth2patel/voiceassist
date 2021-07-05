@@ -93,7 +93,7 @@ function process(rawText) {
     }
     else if(text.includes("play")){
         window.open(`https://www.youtube.com/results?search_query=${rawText.replace("play", "")}`, "_blank");
-        response = "playing " + rawText.replace("Play", "")};
+        response = "playing " + rawText.replace("Play", "");
     }
     else if(text.includes("stop") || text.includes("exit")){
         response = "Bye!!";
