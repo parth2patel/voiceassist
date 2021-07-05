@@ -59,12 +59,12 @@ function process(rawText) {
     text = text.toLowerCase();
     let response = null;
     
-    const jokes[
-        'What kind of music do bunnies like best? Answer: Hip Hop!',
-        'Why are cricket stadiums so cool? Answer: Because every seat has a fan in it!',
-        'Why did the banker switch careers? Answer: She lost interest',
-        'What do you call a rose that wants to go to the moon? Answer: Gulab Ja Moon',
-        'What is orange and sounds like a parrot? Answer: A carrot'
+    const jokes = [
+        "What kind of music do bunnies like best? Answer: Hip Hop!",
+        "Why are cricket stadiums so cool? Answer: Because every seat has a fan in it!",
+        "Why did the banker switch careers? Answer: She lost interest",
+        "What do you call a rose that wants to go to the moon? Answer: Gulab Ja Moon",
+        "What is orange and sounds like a parrot? Answer: A carrot"
     ];
     
     if(text.includes("hello")){
